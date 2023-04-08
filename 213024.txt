@@ -1,0 +1,31 @@
+git init
+git remote add origin https://github.com/marijastojanoska/SI_2023_lab1_213024.git
+git add README.md
+git commit -m "Initial commit"
+git add SILab1.java
+git commit -m "Add java class"
+git push origin master
+git branch bug1
+git branch bug2
+git branch bug3
+git checkout bug1
+git commit -a -m "Fix wrong loop for reading"
+git checkout bug2
+git commit -a -m "Fix wrong condition in filterOddNumbers"
+git checkout bug3
+git commit -a -m "Fix method sumEvenNumbers"
+git push origin --all
+git checkout master
+git merge bug1 (ff)
+git push origin --all
+git merge bug2 (recursive)
+git push origin --all
+git checkout bug3 
+git rebase master
+git checkout master
+git merge bug3 (ff)
+git push origin --all --force
+// strategies:
+// for merging bug1 is ff
+// for merging bug2 is recursive
+// fot merging bug3 is ff
